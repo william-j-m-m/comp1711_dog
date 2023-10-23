@@ -28,14 +28,14 @@ void tokeniseRecord(const char *input, const char *delimiter,
 }
 
 int main() {
-    char record[21] = "2023-09-01,07:30,300";
+    char record[21] = "2023-09-01/07:30/300";
     char date[11];
     char time[6];
     char steps[10];  // Large enough to hold a typical step count as a string
 
     int stepsint;
     
-    tokeniseRecord(record, ",", date, time, steps);
+    tokeniseRecord(record, "/", date, time, steps);
     
     printf("Date: %s\n", date);
     printf("Time: %s\n", time);
